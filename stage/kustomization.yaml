@@ -6,7 +6,4 @@ resources:
 - ../base
 images:
 - name: seyio/etherbank-frontend
-  newTag: latest
-replicas:
-- count: 1
-  name: nginx-app-deployment
+  newTag: 510d2100
