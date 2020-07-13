@@ -11,5 +11,5 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: etherbank-frontend
+          serviceName: etherbank-client-service
           servicePort: 80
