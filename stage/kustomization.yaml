@@ -9,4 +9,4 @@ images:
   newTag: latest
 replicas:
 - count: 1
-  name: nginx-app-deployment
+  name: etherbank-client-deployment

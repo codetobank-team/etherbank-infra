@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: etherbank-client-ingress
+  namespace: etherbank-dev
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: etherbank.ddns.net
+    http:
+      paths:
+      - backend:
+          serviceName: etherbank-frontend
+          servicePort: 80
