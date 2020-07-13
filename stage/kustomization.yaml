@@ -6,7 +6,11 @@ resources:
 - ../base
 images:
 - name: seyio/etherbank-frontend
+<<<<<<< HEAD
   newTag: latest
 replicas:
 - count: 1
   name: etherbank-client-deployment
+=======
+  newTag: 510d2100
+>>>>>>> c95372690f96754b18b0bb4bbbbae863ccd1c6a3
