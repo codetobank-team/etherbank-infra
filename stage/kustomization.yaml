@@ -5,6 +5,7 @@ namespace: etherbank-dev
 
 resources:
 - ../base
+- namespace.yml
 images:
 - name: seyio/etherbank-frontend
   newTag: 8189103f

@@ -5,6 +5,7 @@ namespace: etherbank-client-prod
 
 resources:
 - ../base
+- namespace-prod.yml
 images:
 - name: seyio/etherbank-frontend
   newTag: latest
