@@ -7,7 +7,4 @@ resources:
 - ../base
 images:
 - name: seyio/etherbank-frontend
-  newTag: latest
-replicas:
-- count: 1
-  name: etherbank-client-deployment
+  newTag: 8189103f
