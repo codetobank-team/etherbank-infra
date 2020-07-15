@@ -1,3 +1,22 @@
-- op: replace
-  path: /spec/rules/0/host
-  value: etherbank-prod.ddns.net
+# - op: replace
+#   path: /spec/rules/0/host
+#   value: etherbank-prod.ddns.net
+- op: add
+  path: /metadata/annotations
+  value: 
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+- op: add
+  path: /spec
+  value: 
+    tls:
+      - hosts:
+        - oneblock.ddns.net
+        secretName: tls-client-secret
+    rules:
+      - hosts: oneblock.ddns.net
+        http:
+          paths:
+          - backend:
+              serviceName: etherbank-client-service
+              servicePort: 80
