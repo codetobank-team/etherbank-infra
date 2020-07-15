@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: nginx-prod
+namespace: etherbank-client-prod
 
 resources:
 - ../base
@@ -9,5 +9,13 @@ images:
 - name: seyio/etherbank-frontend
   newTag: latest
 replicas:
-- count: 1
+- count: 2
   name: etherbank-client-deployment
+patchesJson6902:
+- target:
+    group: networking.k8s.io
+    version: v1beta1
+    kind: Ingress
+    name: etherbank-client-ingress
+    namespace: etherbank-client-prod
+  path: ingress_patch.yml
