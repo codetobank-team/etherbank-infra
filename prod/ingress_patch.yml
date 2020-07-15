@@ -14,7 +14,7 @@
         - oneblock.ddns.net
         secretName: tls-client-secret
     rules:
-      - hosts: oneblock.ddns.net
+      - host: oneblock.ddns.net
         http:
           paths:
           - backend:
