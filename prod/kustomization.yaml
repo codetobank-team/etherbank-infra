@@ -8,7 +8,7 @@ resources:
 - namespace-prod.yml
 images:
 - name: seyio/etherbank-frontend
-  newTag: e8c7f0e6
+  newTag: bb56c7c8
 patchesJson6902:
 - path: ingress_patch.yml
   target:
