@@ -8,4 +8,4 @@ resources:
 - namespace.yml
 images:
 - name: seyio/etherbank-frontend
-  newTag: 900b302f
+  newTag: bb367962
