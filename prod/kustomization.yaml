@@ -8,15 +8,12 @@ resources:
 - namespace-prod.yml
 images:
 - name: seyio/etherbank-frontend
-  newTag: latest
-replicas:
-- count: 2
-  name: etherbank-client-deployment
+  newTag: 7ab8affa
 patchesJson6902:
-- target:
+- path: ingress_patch.yml
+  target:
     group: networking.k8s.io
-    version: v1beta1
     kind: Ingress
     name: etherbank-client-ingress
     namespace: etherbank-client-prod
-  path: ingress_patch.yml
+    version: v1beta1
